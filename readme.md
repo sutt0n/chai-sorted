@@ -1,6 +1,6 @@
 [![npm Version](https://img.shields.io/npm/v/chai-sorted.svg)](https://npmjs.org/package/chai-sorted)
 [![License](https://img.shields.io/npm/l/chai-sorted.svg)](LICENSE)
-![Build Status](https://travis-ci.org/johntimothybailey/chai-sorted.svg?branch=master)](https://travis-ci.org/johntimothybailey/chai-sorted)
+[![Build Status]https://travis-ci.org/johntimothybailey/chai-sorted.svg?branch=master)](https://travis-ci.org/johntimothybailey/chai-sorted)
 [![Coverage Status](https://coveralls.io/repos/johntimothybailey/chai-sorted/badge.svg)](https://coveralls.io/r/johntimothybailey/chai-sorted)
 [![Code Climate](https://codeclimate.com/github/johntimothybailey/chai-sorted/badges/gpa.svg)](https://codeclimate.com/github/johntimothybailey/chai-sorted)
 [![devDependency Status](https://david-dm.org/johntimothybailey/chai-sorted/dev-status.svg)](https://david-dm.org/johntimothybailey/chai-sorted#info=devDependencies)
