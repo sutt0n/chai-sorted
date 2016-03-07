@@ -31,9 +31,5 @@
   "homepage": "https://github.com/johntimothybailey/chai-sorted#readme",
   "directories": {
     "test": "test"
-  },
-  "dependencies": {
-    "chai": "^3.5.0",
-    "jshint": "^2.9.1"
   }
 }
