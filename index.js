@@ -1,1 +1,1 @@
-require("./lib/chai-sorted");
+module.exports = require("./lib/chai-sorted");
