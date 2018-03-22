@@ -22,6 +22,19 @@ describe('to.not.be.sorted() in ascending order', function () {
   // Additional condition testing of values is done in test/is.sorted.js
 })
 
+describe('to.be.sorted(true) in descending order', function () {
+  it('with array of numbers', function () {
+    expect([3, 2, 1]).to.be.sorted(true)
+  })
+  it('with array of numbers', function () {
+    expect(['b', 'apples']).to.be.sorted(true)
+  })
+  it('with array of words with mixed case', function () {
+    expect(['validCharacters', 'process', 'decal']).to.be.sorted(true)
+  })
+  // Additional condition testing of values is done in test/is.sorted.js
+})
+
 describe('to.be.sortedBy() in ascending order', function () {
   it('key id of numbers', function () {
     expect([{id: 1}, {id: 2}, {id: 3}]).to.be.sortedBy('id')
