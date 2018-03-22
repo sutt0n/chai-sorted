@@ -31,7 +31,7 @@ chai.use(require("chai-sorted"));
 
 ### In the browser
 
-There is no planned support for keeping a browser *build* in this respository, so please consider [Webpack](https://webpack.github.io/) or similar tool.
+There is no planned support for keeping a browser *build* in this repository, so please consider [Webpack](https://webpack.github.io/) or similar tool.
 
 If you do want Browser installation support, please open an issue.
 

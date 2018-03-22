@@ -4,7 +4,7 @@
   "description": "Chai JS Plugin for testing if an array has sorted values (strings, numbers, booleans). Very helpful when writing tests for features that implement Array.prototype.sort()",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && npm run test:only",
+    "test": "yarn lint && yarn test:only",
     "test:only": "mocha test/**/*",
     "lint": "eslint lib/**/* test/**/*"
   },
@@ -20,7 +20,7 @@
   "author": "johntimothybailey",
   "license": "MIT",
   "engines": {
-    "node": ">=0.12.6"
+    "node": ">=0.4"
   },
   "devDependencies": {
     "chai": "^3.5.0",
