@@ -1,10 +1,12 @@
 {
   "name": "chai-sorted",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Chai JS Plugin for testing if an array has sorted values (strings, numbers, booleans). Very helpful when writing tests for features that implement Array.prototype.sort()",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha && ./node_modules/.bin/jshint index.js"
+    "test": "npm run lint && npm run test:only",
+    "test:only": "mocha test/**/*",
+    "lint": "eslint lib/**/* test/**/*"
   },
   "repository": {
     "type": "git",
@@ -22,8 +24,15 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "jshint": "^2.9.1",
-    "mocha": "^2.4.5"
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-mocha": "^4.12.1",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^2.4.5",
+    "standard": "^11.0.1"
   },
   "bugs": {
     "url": "https://github.com/johntimothybailey/chai-sorted/issues"
