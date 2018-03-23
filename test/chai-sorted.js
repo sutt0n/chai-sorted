@@ -22,6 +22,17 @@ describe('to.not.be.sorted() in ascending order', function () {
   // Additional condition testing of values is done in test/is.sorted.js
 })
 
+describe('Backwards compatibility', function () {
+  it('sorts in descending order with boolean argument', function () {
+    expect([3, 2, 1]).to.be.sorted(true)
+    expect(['b', 'apples']).to.be.sorted(true)
+    expect(['validCharacters', 'process', 'decal']).to.be.sorted(true)
+    expect([{id: 3}, {id: 2}, {id: 2}]).to.be.sortedBy('id', true)
+    expect([{id: 'c'}, {id: 'b'}, {id: 'a'}]).to.be.sortedBy('id', true)
+    expect([{id: 1, name: 'cat'}, {id: 34, name: 'bat'}, {id: 3, name: 'b'}, {size: 'large', name: 'apple'}]).to.be.sortedBy('name', true)
+  })
+})
+
 describe('to.be.sorted({ descending: true }) in descending order', function () {
   it('with array of numbers', function () {
     expect([3, 2, 1]).to.be.sorted({ descending: true })
