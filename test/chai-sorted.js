@@ -22,15 +22,26 @@ describe('to.not.be.sorted() in ascending order', function () {
   // Additional condition testing of values is done in test/is.sorted.js
 })
 
-describe('to.be.sorted(true) in descending order', function () {
-  it('with array of numbers', function () {
+describe('Backwards compatibility', function () {
+  it('sorts in descending order with boolean argument', function () {
     expect([3, 2, 1]).to.be.sorted(true)
+    expect(['b', 'apples']).to.be.sorted(true)
+    expect(['validCharacters', 'process', 'decal']).to.be.sorted(true)
+    expect([{id: 3}, {id: 2}, {id: 2}]).to.be.sortedBy('id', true)
+    expect([{id: 'c'}, {id: 'b'}, {id: 'a'}]).to.be.sortedBy('id', true)
+    expect([{id: 1, name: 'cat'}, {id: 34, name: 'bat'}, {id: 3, name: 'b'}, {size: 'large', name: 'apple'}]).to.be.sortedBy('name', true)
+  })
+})
+
+describe('to.be.sorted({ descending: true }) in descending order', function () {
+  it('with array of numbers', function () {
+    expect([3, 2, 1]).to.be.sorted({ descending: true })
   })
   it('with array of numbers', function () {
-    expect(['b', 'apples']).to.be.sorted(true)
+    expect(['b', 'apples']).to.be.sorted({ descending: true })
   })
   it('with array of words with mixed case', function () {
-    expect(['validCharacters', 'process', 'decal']).to.be.sorted(true)
+    expect(['validCharacters', 'process', 'decal']).to.be.sorted({ descending: true })
   })
   // Additional condition testing of values is done in test/is.sorted.js
 })
@@ -47,15 +58,21 @@ describe('to.be.sortedBy() in ascending order', function () {
   })
 })
 
+describe('to.be.sortedBy({ descending: false }) in ascending order', function () {
+  it('key id of numbers', function () {
+    expect([1, 2, 3]).to.be.sorted({ descending: false })
+  })
+})
+
 describe('to.be.sortedBy() in descending order', function () {
   it('key id of numbers', function () {
-    expect([{id: 3}, {id: 2}, {id: 2}]).to.be.sortedBy('id', true)
+    expect([{id: 3}, {id: 2}, {id: 2}]).to.be.sortedBy('id', { descending: true })
   })
   it('key id of strings', function () {
-    expect([{id: 'c'}, {id: 'b'}, {id: 'a'}]).to.be.sortedBy('id', true)
+    expect([{id: 'c'}, {id: 'b'}, {id: 'a'}]).to.be.sortedBy('id', { descending: true })
   })
   it('key name of words and letters', function () {
-    expect([{id: 1, name: 'cat'}, {id: 34, name: 'bat'}, {id: 3, name: 'b'}, {size: 'large', name: 'apple'}]).to.be.sortedBy('name', true)
+    expect([{id: 1, name: 'cat'}, {id: 34, name: 'bat'}, {id: 3, name: 'b'}, {size: 'large', name: 'apple'}]).to.be.sortedBy('name', { descending: true })
   })
 })
 
