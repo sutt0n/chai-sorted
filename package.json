@@ -1,6 +1,6 @@
 {
   "name": "chai-sorted",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Chai JS Plugin for testing if an array has sorted values (strings, numbers, booleans). Very helpful when writing tests for features that implement Array.prototype.sort()",
   "main": "index.js",
   "scripts": {
